@@ -1645,7 +1645,7 @@
     )
     (pin "1" (uuid 3ce892b6-3d0b-435a-af04-5e1325633927))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR024") (unit 1)
         )
@@ -1671,7 +1671,7 @@
     (pin "1" (uuid 829ef568-f333-4203-a0a1-69972ae62be8))
     (pin "2" (uuid 7aeb01c3-12fb-402a-8cdd-5eebb2c6bd55))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "R1") (unit 1)
         )
@@ -1706,7 +1706,7 @@
     (pin "8" (uuid 8cd81942-1e0c-469c-bd6a-72ed7e55ffe0))
     (pin "9" (uuid 537256c7-8514-4f2a-a1a5-004841f743ba))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "U7") (unit 1)
         )
@@ -1731,7 +1731,7 @@
     )
     (pin "1" (uuid 34edba6a-99c9-4941-a16a-26f9d6f824ae))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR013") (unit 1)
         )
@@ -1759,7 +1759,7 @@
     (pin "3" (uuid 377d0b49-daa0-4021-a884-4fe2d5e10564))
     (pin "4" (uuid 1ea70545-353f-4d54-934b-1d08e2e09c9c))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "J3") (unit 1)
         )
@@ -1784,7 +1784,7 @@
     )
     (pin "1" (uuid 7ae70bb8-4126-4dfc-9db6-3dd2350313c4))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR026") (unit 1)
         )
@@ -1810,7 +1810,7 @@
     (pin "1" (uuid 89003510-969b-4bf4-b762-a863ceae302f))
     (pin "2" (uuid ebb9f599-a535-4920-87c4-5d9c81b975ab))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "C9") (unit 1)
         )
@@ -1835,7 +1835,7 @@
     )
     (pin "1" (uuid 581d020c-8a8f-4572-89a7-e1e3767f454d))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR04") (unit 1)
         )
@@ -1860,7 +1860,7 @@
     )
     (pin "1" (uuid 54a595fc-402a-4667-b9d0-0f4504fa451b))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR017") (unit 1)
         )
@@ -1886,7 +1886,7 @@
     (pin "1" (uuid 4172ff63-7712-43e4-af91-3e3bd885b8c6))
     (pin "2" (uuid 4d2ecefb-c1b5-4057-979a-7338fe381fd8))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "R9") (unit 1)
         )
@@ -1911,7 +1911,7 @@
     )
     (pin "1" (uuid 4c2062ec-2cf9-4494-9e44-bd1a8bcc3bd0))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR014") (unit 1)
         )
@@ -1937,7 +1937,7 @@
     (pin "1" (uuid a6e287bf-7032-485c-b29b-0fb5580e046f))
     (pin "2" (uuid a4795600-9a30-468f-88ab-3331e2883a22))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "JP4") (unit 1)
         )
@@ -1972,7 +1972,7 @@
     (pin "8" (uuid f67b2600-8480-482d-8de5-f581eace01eb))
     (pin "9" (uuid ef5edba0-4104-483b-9a60-07f8aa8f41e4))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "U4") (unit 1)
         )
@@ -1989,7 +1989,7 @@
     (property "Value" "~" (at 146.05 137.16 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 146.05 137.16 0)
+    (property "Footprint" "pressureSensorFootprintLibrary:HV120SM02C" (at 146.05 137.16 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 146.05 137.16 0)
@@ -2007,7 +2007,7 @@
     (pin "8" (uuid 77641ab6-5d9d-401e-93cc-2a06e6fa97e1))
     (pin "9" (uuid fa843d4e-76c0-4c46-9097-af7279cdb4aa))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "U5") (unit 1)
         )
@@ -2033,7 +2033,7 @@
     (pin "1" (uuid 70ee16e0-6e26-49d8-9dd9-874a880731f5))
     (pin "2" (uuid ec282fd2-c4da-43ee-8faa-155a4e768c66))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "JP2") (unit 1)
         )
@@ -2059,7 +2059,7 @@
     (pin "1" (uuid 891608b8-ebe3-4f1c-b891-3200bf6637e7))
     (pin "2" (uuid db93f4e8-b457-4f55-a743-f24b8d9dd08d))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "C2") (unit 1)
         )
@@ -2084,7 +2084,7 @@
     )
     (pin "1" (uuid 9dfad2e6-55fe-4195-992f-c9abf117991f))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR016") (unit 1)
         )
@@ -2109,7 +2109,7 @@
     )
     (pin "1" (uuid 8535e9dc-455f-4d08-8ded-b27ea2f4a9b9))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR012") (unit 1)
         )
@@ -2135,7 +2135,7 @@
     (pin "1" (uuid b1010c83-3aac-4967-b76e-f03367c21086))
     (pin "2" (uuid 1cbe8677-f43e-4dc0-9c03-46de9fd83153))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "R11") (unit 1)
         )
@@ -2161,7 +2161,7 @@
     (pin "1" (uuid f14def13-4ac7-4d76-8763-e4781826bee0))
     (pin "2" (uuid fb49f590-decc-43a0-8582-861bc7593ad0))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "R3") (unit 1)
         )
@@ -2186,7 +2186,7 @@
     )
     (pin "1" (uuid 939e29bc-ae6d-4682-bb19-8b80878be52e))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR05") (unit 1)
         )
@@ -2216,7 +2216,7 @@
     (pin "5" (uuid 2938d9e8-0714-499d-b5d7-4413feb7ff62))
     (pin "6" (uuid 2f741e49-b38a-443c-b6f5-04a83a413380))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "J2") (unit 1)
         )
@@ -2241,7 +2241,7 @@
     )
     (pin "1" (uuid 05da3b81-14ce-4a1c-8dfc-de1a5355529c))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR02") (unit 1)
         )
@@ -2276,7 +2276,7 @@
     (pin "8" (uuid be1ef5ab-3bb8-4cad-bfe9-28a5f0c5e067))
     (pin "9" (uuid 1727ca3d-6620-44fe-b4cd-3681bd939a16))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "U6") (unit 1)
         )
@@ -2310,7 +2310,7 @@
     (pin "8" (uuid c7bf8c9d-28cd-4bb3-8a2f-1f359dad7be2))
     (pin "9" (uuid 81aac34c-034b-4bde-bbdd-16a43d5735b9))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "U3") (unit 1)
         )
@@ -2335,7 +2335,7 @@
     )
     (pin "1" (uuid 12317bd7-f289-4aa4-995a-6a90509dd928))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR018") (unit 1)
         )
@@ -2361,7 +2361,7 @@
     (pin "1" (uuid 9629cb0a-9d2d-48fe-8d2f-f03e69d588e4))
     (pin "2" (uuid 9eb8caea-c09d-43ee-84fd-c145f3c54d64))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "R8") (unit 1)
         )
@@ -2387,7 +2387,7 @@
     (pin "1" (uuid c9d80dcd-86e7-4fb4-b6d2-ede9e7b8a827))
     (pin "2" (uuid bfbc0576-959f-4e43-99a7-5c57b445b59a))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "C1") (unit 1)
         )
@@ -2413,7 +2413,7 @@
     (pin "1" (uuid 8ecceb6c-2acc-491e-af19-62fa3bc52b39))
     (pin "2" (uuid dc924554-09a2-4e06-b1fd-e53608edc266))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "D3") (unit 1)
         )
@@ -2438,7 +2438,7 @@
     )
     (pin "1" (uuid 05bea70c-3230-42d9-af57-b56dace990bb))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR03") (unit 1)
         )
@@ -2463,7 +2463,7 @@
     )
     (pin "1" (uuid ae074a64-7008-4dbe-854b-307185f8239a))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR025") (unit 1)
         )
@@ -2489,7 +2489,7 @@
     (pin "1" (uuid fa7013d9-0363-442d-b6bf-7c4d8a60ce63))
     (pin "2" (uuid 90eaf6fb-db04-4a76-971a-5243f4e31958))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "C5") (unit 1)
         )
@@ -2515,7 +2515,7 @@
     (pin "1" (uuid db8112a9-4837-4743-be22-1d2d2aa35496))
     (pin "2" (uuid cdc96f05-2297-4685-b478-da75e0438aac))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "L1") (unit 1)
         )
@@ -2540,7 +2540,7 @@
     )
     (pin "1" (uuid 226dfb8c-2f33-4012-bbed-0c70a51f4be2))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR028") (unit 1)
         )
@@ -2566,7 +2566,7 @@
     (pin "1" (uuid 7342296c-e543-4e75-974a-5ed4639e6e0d))
     (pin "2" (uuid b6fe8323-ecf1-4417-822e-70eae2d4d95e))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "R5") (unit 1)
         )
@@ -2629,7 +2629,7 @@
     (pin "8" (uuid 4626e797-b2c7-459f-ba9d-45b262568a6f))
     (pin "9" (uuid 9be47b71-1b77-4af2-881d-9b0a40a52c8c))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "U1") (unit 1)
         )
@@ -2655,7 +2655,7 @@
     (pin "1" (uuid 5be9e7fd-6513-4de8-b6f2-22e7b6096954))
     (pin "2" (uuid 757cf887-8ea3-421a-b70b-66babfe43c79))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "D4") (unit 1)
         )
@@ -2681,7 +2681,7 @@
     (pin "1" (uuid 656b76f8-d7c5-42cf-b101-c859563db497))
     (pin "2" (uuid c208159d-0283-4f4d-9ef7-3ecdf7df4a33))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "R4") (unit 1)
         )
@@ -2706,7 +2706,7 @@
     )
     (pin "1" (uuid d47cd80b-2d79-4340-9429-a5cc3a8de0a3))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR06") (unit 1)
         )
@@ -2735,7 +2735,7 @@
     (pin "4" (uuid 0f65a73e-57c6-4f03-994a-e51a5ed91ba0))
     (pin "5" (uuid 56abf328-a848-4a2c-92d3-a68954688394))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "U2") (unit 1)
         )
@@ -2760,7 +2760,7 @@
     )
     (pin "1" (uuid 5f4d5e26-05c6-404e-a9cd-bd152138c406))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR029") (unit 1)
         )
@@ -2786,7 +2786,7 @@
     (pin "1" (uuid 8c0b6049-ef95-4c79-b732-9e6b36159368))
     (pin "2" (uuid 786325b6-84c3-4fdd-a999-cf2175bb4207))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "C4") (unit 1)
         )
@@ -2811,7 +2811,7 @@
     )
     (pin "1" (uuid 0362f946-660b-4e70-b910-aaca8793d428))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR019") (unit 1)
         )
@@ -2836,7 +2836,7 @@
     )
     (pin "1" (uuid a72a2a40-dc6f-4086-9560-c8be691cf1b7))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR023") (unit 1)
         )
@@ -2862,7 +2862,7 @@
     (pin "1" (uuid 34166677-de33-4d9a-bb3d-7cced5841552))
     (pin "2" (uuid e2a0eb28-97cb-4a18-90c4-9d2708625fdb))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "JP3") (unit 1)
         )
@@ -2888,7 +2888,7 @@
     (pin "1" (uuid d86fbb68-3302-4a3a-ae1e-6b8007228e34))
     (pin "2" (uuid 4130ed12-00cd-41b6-b67a-46bda14e9d87))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "R7") (unit 1)
         )
@@ -2913,7 +2913,7 @@
     )
     (pin "1" (uuid 49e73dfb-9a5e-4247-8a2e-96ebe8e01b69))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR01") (unit 1)
         )
@@ -2938,7 +2938,7 @@
     )
     (pin "1" (uuid 54ac1e6e-12fc-4bda-8609-70ccc829368b))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR022") (unit 1)
         )
@@ -2964,7 +2964,7 @@
     (pin "1" (uuid 503cddce-1ddf-40b0-81e4-ee205791cf9c))
     (pin "2" (uuid 21aca893-ebc0-488b-8ea8-4cca38a8bcba))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "JP1") (unit 1)
         )
@@ -2990,7 +2990,7 @@
     (pin "1" (uuid f216804f-da7c-4d98-bf8c-9b3c205f515e))
     (pin "2" (uuid 24253672-bd38-487d-bafb-23310169eb36))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "R2") (unit 1)
         )
@@ -3015,7 +3015,7 @@
     )
     (pin "1" (uuid 58d3d59e-31c6-4867-aded-0fea576c2ca1))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR08") (unit 1)
         )
@@ -3040,7 +3040,7 @@
     )
     (pin "1" (uuid 7a6fa75d-5970-490d-ac87-0e8b18bb6491))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR015") (unit 1)
         )
@@ -3066,7 +3066,7 @@
     (pin "1" (uuid a2f6bc19-b9f1-4016-9593-af6feeb63b5d))
     (pin "2" (uuid e6345795-7c63-41cb-8625-6fbebfc36487))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "R12") (unit 1)
         )
@@ -3092,7 +3092,7 @@
     (pin "1" (uuid 205d5d76-5e08-4274-a3e0-6f7867d90a3c))
     (pin "2" (uuid 7501e864-577a-4fc1-88e8-c2716130ac18))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "C3") (unit 1)
         )
@@ -3118,7 +3118,7 @@
     (pin "1" (uuid 7a3ae130-6579-4bc4-9a71-ee1df26f2331))
     (pin "2" (uuid a1d0d56e-75bb-4bf4-8bda-109f8f66e0f1))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "D1") (unit 1)
         )
@@ -3143,7 +3143,7 @@
     )
     (pin "1" (uuid a7400624-82ae-4da1-8155-cacbcff485a5))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR09") (unit 1)
         )
@@ -3168,7 +3168,7 @@
     )
     (pin "1" (uuid 11959bda-db52-4d62-8bab-7172cde122f0))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR07") (unit 1)
         )
@@ -3194,7 +3194,7 @@
     (pin "1" (uuid 090a0f37-d745-4d7a-987f-8ae105ad43ef))
     (pin "2" (uuid 103fea05-ddd3-4a36-921b-d9d946ce4209))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "D2") (unit 1)
         )
@@ -3220,7 +3220,7 @@
     (pin "1" (uuid be1ef556-6463-43e2-98be-ed05519907c1))
     (pin "2" (uuid 56c2aa90-d3fb-4a93-b139-819c52fb096f))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "R10") (unit 1)
         )
@@ -3245,7 +3245,7 @@
     )
     (pin "1" (uuid 4f198f35-90e8-4161-ab82-c48f297d9d5a))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR010") (unit 1)
         )
@@ -3270,7 +3270,7 @@
     )
     (pin "1" (uuid fc490d58-a02b-4a73-88b4-5194aece3cd0))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR011") (unit 1)
         )
@@ -3295,7 +3295,7 @@
     )
     (pin "1" (uuid 0a08c559-96a0-42da-871b-6e225924ad42))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "#PWR027") (unit 1)
         )
@@ -3321,7 +3321,7 @@
     (pin "1" (uuid 601b6615-818a-4238-af3d-944ee95a083d))
     (pin "2" (uuid e75c817f-384d-4144-8f65-518243c7c135))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "C8") (unit 1)
         )
@@ -3347,7 +3347,7 @@
     (pin "1" (uuid 4df6a149-fc2c-445b-bde6-6dd0f32e027c))
     (pin "2" (uuid 8933e93d-6ed3-4e01-b72c-e83045d34c8b))
     (instances
-      (project "Weather Station Motherboard V1"
+      (project "motherboard"
         (path "/782b25c2-8b22-49ba-9398-f7481b8d9716"
           (reference "J1") (unit 1)
         )
