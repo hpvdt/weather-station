@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "2023-12-02_16-58-31")(type "KiCad")(uri "C:/Users/ettod/Downloads/ul_BMP390/KiCADv6/2023-12-02_16-58-31.kicad_sym")(options "")(descr ""))
+  (lib (name "ND005")(type "KiCad")(uri "${KIPRJMOD}/ND005.kicad_sym")(options "")(descr ""))
+)
