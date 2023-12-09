@@ -2768,7 +2768,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 200.66 143.51 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 279bbb62-4a39-4bad-a9b1-a18fa3824304)
     (property "Reference" "JP9" (at 205.74 142.24 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -3026,7 +3026,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 200.66 149.86 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 415f8b40-7e07-4ec4-8c69-560bd0253121)
     (property "Reference" "JP10" (at 207.01 148.59 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -3204,7 +3204,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 200.66 80.01 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 4d119a4e-0db8-451d-8718-e1afe4f9f93b)
     (property "Reference" "JP12" (at 207.01 78.74 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -3624,7 +3624,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 200.66 111.76 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 7724dcbe-2697-412b-a77d-38cf9c62b629)
     (property "Reference" "JP4" (at 205.74 110.49 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -3764,7 +3764,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 200.66 118.11 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 84ecdbeb-0efa-4ff7-b82b-f87667bcd24e)
     (property "Reference" "JP5" (at 205.74 116.84 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -3842,7 +3842,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 200.66 124.46 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 90c5031c-c657-4f83-a4d4-412597a6f5fa)
     (property "Reference" "JP6" (at 205.74 123.19 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -3893,7 +3893,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 200.66 86.36 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 916ca1aa-68f5-410b-847c-7d1365d92452)
     (property "Reference" "JP11" (at 207.01 85.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -4236,7 +4236,7 @@
   )
 
   (symbol (lib_id "Mechanical:MountingHole") (at 284.48 24.13 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ba902786-517e-4229-a3c7-2e71f2a44be3)
     (property "Reference" "H1" (at 287.02 22.86 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -4310,7 +4310,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 200.66 92.71 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid bc479b6a-e99e-4126-a152-34e4886d1fe4)
     (property "Reference" "JP1" (at 205.74 91.44 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -4439,7 +4439,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 200.66 137.16 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid c36ed0c8-77f4-4f52-b580-9ef2d487dba3)
     (property "Reference" "JP8" (at 205.74 135.89 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -4515,7 +4515,7 @@
   )
 
   (symbol (lib_id "Mechanical:MountingHole") (at 284.48 36.83 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c6a50d9d-3c79-414a-bf4c-4b8df898c109)
     (property "Reference" "H3" (at 287.02 35.56 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -4564,7 +4564,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 200.66 105.41 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid cf4e454e-2c97-484e-977e-025a1a0e09a6)
     (property "Reference" "JP3" (at 205.74 104.14 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -4743,7 +4743,7 @@
   )
 
   (symbol (lib_id "Mechanical:MountingHole") (at 284.48 43.18 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid daf527b3-09e4-4ee1-a613-95d0b362a2b0)
     (property "Reference" "H4" (at 287.02 41.91 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -5045,7 +5045,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 200.66 99.06 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid f2cac1ed-ac11-4550-8892-07dd166a9c05)
     (property "Reference" "JP2" (at 205.74 97.79 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -5180,7 +5180,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 200.66 130.81 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid fe541897-0f8b-4b0f-8b09-43f00b525b11)
     (property "Reference" "JP7" (at 205.74 129.54 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -5206,7 +5206,7 @@
   )
 
   (symbol (lib_id "Mechanical:MountingHole") (at 284.48 30.48 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fecf5b61-ef3e-44a2-9aa9-0f5b784a6953)
     (property "Reference" "H2" (at 287.02 29.21 0)
       (effects (font (size 1.27 1.27)) (justify left))
