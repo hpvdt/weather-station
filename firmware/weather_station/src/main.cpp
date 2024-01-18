@@ -4,15 +4,15 @@
 // #include <DFRobot_BMP3XX.h>
 #include <WiFi.h>
 
-const int ledPin = 12;
+const int ledPin[] = {12, 13, 14, 15};
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
+  for (int i = 0; i < 4; i ++) pinMode(ledPin[i], OUTPUT);
 }
 
 void loop() {
-  digitalWrite(ledPin, HIGH);
+  for (int i = 0; i < 4; i ++) digitalWrite(ledPin[i], HIGH);
   delay(1000);
-  digitalWrite(ledPin, LOW);
+  for (int i = 0; i < 4; i ++) digitalWrite(ledPin[i], LOW);
   delay(1000);
 }
