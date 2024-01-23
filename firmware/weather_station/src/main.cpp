@@ -45,7 +45,7 @@ void setup() {
   bmp.setOutputDataRate(BMP3_ODR_50_HZ);
 }
 
-void loop() {  
+void loop() {
   if (! bmp.performReading()) {
     Serial.println("Failed to perform reading :(");
     return;
