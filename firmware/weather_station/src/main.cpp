@@ -116,8 +116,8 @@ void setup() {
 
   // open serial 
   Serial.begin(115200);
-  while (!Serial)
-    delay(10);     // will pause until serial console opens
+  // whil
+  //delay(10);     // will pause until serial console opens
   
   // initialize 
   initWiFi();
