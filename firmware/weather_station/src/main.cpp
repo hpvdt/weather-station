@@ -1,40 +1,148 @@
 #include <Arduino.h>
-#include <SPI.h>
 #include <Adafruit_SHTC3.h>
 #include <WiFi.h>
 #include <Adafruit_BMP3XX.h>
-#include <BluetoothSerial.h>
 #include <Wire.h>
+#include "SPIFFS.h"
+#include <Arduino_JSON.h>
+#include <ESPAsyncWebServer.h>
+#include <AsyncTCP.h>
 
-//const int ledPin = 2;
+// Set pin for power indicator LED and WiFi connected LED
 #define LedPin 15
-#define SEALEVELPRESSURE_HPA (1033.1)
+#define Wifi_indicator 13
 
+// Set sea level pressure for determining altitude
+#define SEALEVELPRESSURE_HPA (1021.7)
+
+// Set up WiFi credentials
+const char* ssid     = "Weather Station";
+
+// Initalize sensor and bluetooth objects
 Adafruit_BMP3XX bmp;
 Adafruit_SHTC3 shtc3;
-BluetoothSerial SerialBT;
+
+// Set the port number for the WiFi server
+AsyncWebServer server(80);
+
+// Create a WebSocket object
+AsyncWebSocket ws("/ws");
+
+// Timer variables
+unsigned long lastTime = 0;
+unsigned long timerDelay = 5000;
+
+// Get Sensor Readings and return JSON object
+String getSensorReadings(){
+  JSONVar readings;
+  readings["temperature"] = String(bmp.readTemperature());
+  sensors_event_t humidity, temp;
+  shtc3.getEvent(&humidity, &temp); // populate temp and humidity objects with fresh data
+  readings["humidity"] = String(humidity.relative_humidity);
+  readings["pressure"] = String(bmp.readPressure()/100.0F);
+  readings["altitude"] = String(bmp.readAltitude(SEALEVELPRESSURE_HPA));
+  String jsonString = JSON.stringify(readings);
+  return jsonString;
+}
+
+// Initialize SPIFFS
+void initSPIFFS() {
+  if (!SPIFFS.begin(true)) {
+    Serial.println("An error has occurred while mounting SPIFFS");
+  }
+  Serial.println("SPIFFS mounted successfully");
+}
+
+// Initialize WiFi Server
+void initWiFi() {
+  WiFi.mode(WIFI_AP);
+  WiFi.softAP(ssid);
+  delay(100);
+  IPAddress IP(192, 168, 10, 1);
+  IPAddress NMask(255, 255, 255, 0);
+  WiFi.softAPConfig(IP, IP, NMask);
+}
+
+// Function to notify all clients with updated readings
+void notifyClients(String sensorReadings) {
+  ws.textAll(sensorReadings);
+}
+
+// Function to handle requests for new data
+void handleWebSocketMessage(void *arg, uint8_t *data, size_t len) {
+  AwsFrameInfo *info = (AwsFrameInfo*)arg;
+  if (info->final && info->index == 0 && info->len == len && info->opcode == WS_TEXT) {
+    data[len] = 0;
+    String message = (char*)data;
+    //Check if the message is "getReadings"
+    if (strcmp((char*)data, "getReadings") == 0) {
+    //if it is, send current sensor readings
+      String sensorReadings = getSensorReadings();
+      Serial.print(sensorReadings);
+      notifyClients(sensorReadings);
+    }
+  }
+}
+
+// Function to handle websocket events other than new data
+void onEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len) {
+  switch (type) {
+    case WS_EVT_CONNECT:
+      Serial.printf("WebSocket client #%u connected from %s\n", client->id(), client->remoteIP().toString().c_str());
+      break;
+    case WS_EVT_DISCONNECT:
+      Serial.printf("WebSocket client #%u disconnected\n", client->id());
+      break;
+    case WS_EVT_DATA:
+      handleWebSocketMessage(arg, data, len);
+      break;
+    case WS_EVT_PONG:
+    case WS_EVT_ERROR:
+      break;
+  }
+}
+
+// Initialize WebSocket
+void initWebSocket() {
+  ws.onEvent(onEvent);
+  server.addHandler(&ws);
+}
 
 void setup() {
+  // Set up power indicator LED
   pinMode(LedPin, OUTPUT);
+  pinMode(Wifi_indicator, OUTPUT);
   digitalWrite(LedPin, HIGH);
 
-  Serial.begin(9600);
-
+  // open serial 
+  Serial.begin(115200);
   while (!Serial)
     delay(10);     // will pause until serial console opens
+  
+  // initialize 
+  initWiFi();
+  initSPIFFS();
+  initWebSocket();
 
-  SerialBT.begin("ESP32");
-  Serial.println("Connect to Bluetooth");
+  // Web Server Root URL
+  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request) {
+  request->send(SPIFFS, "/index.html", "text/html");
+  });
 
+  server.serveStatic("/", SPIFFS, "/");
+
+  // Start server
+  server.begin();
+
+  // Start SCHT3 Sensor
   Serial.println("SHTC3 test");
   if (! shtc3.begin()) {
     Serial.println("Couldn't find SHTC3");
     while (1) delay(1);
   }  Serial.println("Found SHTC3 sensor");
 
+  //Start BMP390 Sensor
   if (!bmp.begin_I2C()) {   // hardware I2C mode, can pass in address & alt Wire
-  //if (! bmp.begin_SPI(BMP_CS)) {  // hardware SPI mode  
-  //if (! bmp.begin_SPI(BMP_CS, BMP_SCK, BMP_MISO, BMP_MOSI)) {  // software SPI mode
     Serial.println("Could not find a valid BMP3 sensor, check wiring!");
     while (1);
   }
@@ -46,32 +154,15 @@ void setup() {
 }
 
 void loop() {
-  if (! bmp.performReading()) {
-    Serial.println("Failed to perform reading :(");
-    return;
+  if ((millis() - lastTime) > timerDelay) {
+    digitalWrite(Wifi_indicator, HIGH);
+    String sensorReadings = getSensorReadings();
+    Serial.print(sensorReadings);
+    notifyClients(sensorReadings);
+
+    lastTime = millis();
+
   }
-  SerialBT.println("BMP390 Data");
-  SerialBT.printf("Temperature = %.2f *C", bmp.temperature);
-  SerialBT.println();
-  float pressurehPa = bmp.pressure/100;
-  SerialBT.printf("Pressure = %.2f hPa", pressurehPa);
-  SerialBT.println();
-
-  SerialBT.printf("Altitude = %.2f m", bmp.readAltitude(SEALEVELPRESSURE_HPA));  
-  SerialBT.println();
-
-  SerialBT.println("SHTC3 Data");
-  sensors_event_t humidity, temp;
-  shtc3.getEvent(&humidity, &temp);// populate temp and humidity objects with fresh data
-
-  SerialBT.printf("Temperature = %.2f *C", temp.temperature);
-  SerialBT.println();
-
-  SerialBT.printf("Humidity = %.2f %rH", humidity.relative_humidity);
-  SerialBT.println();
-
-  SerialBT.println();
-
-
-  delay(2000);
+  digitalWrite(Wifi_indicator, LOW);
+  ws.cleanupClients();
 }
