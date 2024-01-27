@@ -32,12 +32,15 @@ AsyncWebSocket ws("/ws");
 unsigned long lastTime = 0;
 unsigned long timerDelay = 5000;
 
-// Get Sensor Readings and return JSON object
+// Get Sensor Readings and return JSON object`  
 String getSensorReadings(){
   JSONVar readings;
   readings["temperature"] = String(bmp.readTemperature());
   sensors_event_t humidity, temp;
   shtc3.getEvent(&humidity, &temp); // populate temp and humidity objects with fresh data
+  float N = (log(humidity.relative_humidity/100)+((17.25*bmp.readTemperature())/(237.3+bmp.readTemperature())))/17.27;
+  float D = (237.3*N)/(1-N);
+  readings["dewpoint"] = String(D);
   readings["humidity"] = String(humidity.relative_humidity);
   readings["pressure"] = String(bmp.readPressure()/100.0F);
   readings["altitude"] = String(bmp.readAltitude(SEALEVELPRESSURE_HPA));
@@ -161,7 +164,6 @@ void loop() {
     notifyClients(sensorReadings);
 
     lastTime = millis();
-
   }
   digitalWrite(Wifi_indicator, LOW);
   ws.cleanupClients();
