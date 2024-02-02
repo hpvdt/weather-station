@@ -13,7 +13,7 @@
 #define Wifi_indicator 13
 
 // Set sea level pressure for determining altitude
-#define SEALEVELPRESSURE_HPA (1021.7)
+#define SEALEVELPRESSURE_HPA (1013.25)
 
 // Set up WiFi credentials
 const char* ssid     = "Weather Station";
@@ -32,7 +32,16 @@ AsyncWebSocket ws("/ws");
 unsigned long lastTime = 0;
 unsigned long timerDelay = 5000;
 
-// Get Sensor Readings and return JSON object`  
+// Function to calculate air density
+float air_density(float p, float t, float h){
+  float P1 = pow((6.1078*10), ((7.5*t)/(t+237.3)));
+  float PV = P1*h;
+  float PD = (p*100) - PV;
+  float rho = (PD/(287.058*(t+273.3))) + (PV/(461.495*(t+273.3)));
+  return rho;
+}
+
+// Get Sensor Readings and return JSON object  
 String getSensorReadings(){
   JSONVar readings;
   readings["temperature"] = String(bmp.readTemperature());
@@ -44,6 +53,7 @@ String getSensorReadings(){
   readings["humidity"] = String(humidity.relative_humidity);
   readings["pressure"] = String(bmp.readPressure()/100.0F);
   readings["altitude"] = String(bmp.readAltitude(SEALEVELPRESSURE_HPA));
+  readings["density"] = String(air_density(bmp.readPressure(), bmp.readTemperature(), humidity.relative_humidity));
   String jsonString = JSON.stringify(readings);
   return jsonString;
 }
